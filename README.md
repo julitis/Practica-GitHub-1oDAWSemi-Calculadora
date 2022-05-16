@@ -2,6 +2,10 @@
 ## Calculadora con C# y Visual Studio (Windows Forms) para practicar repositorios.
 ### (Benidorm - IES Pere María Orts y Bosch)
 
+----------
+**Importante recordar que debemos intentar trabajar todos en la rama "base"**  
+----------
+
 **1) Participantes en la práctica**
 1. Tonet
 2. Arturo 
