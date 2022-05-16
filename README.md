@@ -23,10 +23,10 @@
 
 **3) Instrucciones para trabajar en la práctica**
 
-- [x] *1.- Añadir el código correspondiente*
+- [x] *1.- Añadir el código correspondiente*  
     Escribir el código que realice el programa o método requerido.
 
-- [x] *2.- Comentarlo con las debidas instrucciones*
+- [x] *2.- Comentarlo con las debidas instrucciones*  
     Comentarlo utilizando la forma de JavaDoc que está como ejemplo en el proyecto, y a continuación:
 
 ```
@@ -49,12 +49,12 @@
     }
 ```
 
-- [x] *3.- Actualizar desde el repositorio por si ya hay código de otro compañero*
+- [x] *3.- Actualizar desde el repositorio por si ya hay código de otro compañero*  
 
-- [x] *4.- Comprobar que todo funciona correctamente antes de subirlo (Debug)*
+- [x] *4.- Comprobar que todo funciona correctamente antes de subirlo (Debug)*  
 
-- [x] *5.- Fetch y pull/push en el repositorio local*
+- [x] *5.- Fetch y pull/push en el repositorio local*  
 
-- [x] *6.- Pull request al repositorio de GitHub*
+- [x] *6.- Pull request al repositorio de GitHub*  
 
-> Esta descripción me ha servido para practicar MarkDown para documentación de GitHub jejeje :joy:
+> Esta descripción me ha servido para practicar MarkDown para documentación de GitHub jejeje :joy:  
