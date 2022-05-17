@@ -126,6 +126,7 @@ namespace Practica_GitHub_1oDAWSemi_Calculadora
              *  
              */
 
+            //Si textBoxOperador es 0, lo borra y añade un 4
             if (textBoxOperador.Text == "0")
             {
                 textBoxOperador.Text = "4";
@@ -212,7 +213,7 @@ namespace Practica_GitHub_1oDAWSemi_Calculadora
              *  Además pone un 0 en textBoxOperador.
              *  
              */
-
+            //Debe haber algún número en textBoxOperador para entrar en el if
             if (textBoxOperador.Text != "")
             {
                 operador1 = Convert.ToDouble(textBoxOperador.Text);
