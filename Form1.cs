@@ -130,7 +130,22 @@ namespace Practica_GitHub_1oDAWSemi_Calculadora
 
         private void btnCuatro_Click(object sender, EventArgs e)
         {
+            /**
+             *  @Author: Jose Manuel
+             *  
+             *  @Method: Este método añade un 4 al textBoxOperador.
+             *  Si el contenido del textBoxOperador es 0, lo elimina y pone un 4. 
+             *  
+             */
 
+            if (textBoxOperador.Text == "0")
+            {
+                textBoxOperador.Text = "4";
+            }
+            else
+            {
+                textBoxOperador.Text += "4";
+            }
         }
 
         private void btnCinco_Click(object sender, EventArgs e)
@@ -200,7 +215,22 @@ namespace Practica_GitHub_1oDAWSemi_Calculadora
 
         private void btnPotencia_Click(object sender, EventArgs e)
         {
+            /**
+             *  @Author: Jose Manuel
+             *  
+             *  @Method: Este método comprueba que hayan números en el textBoxOperador.
+             *  Si hay, guarda en la variable operador1 lo que hay en textBoxOperador
+             *  y en la variable operador el carácter ^.
+             *  Además pone un 0 en textBoxOperador.
+             *  
+             */
 
+            if (textBoxOperador.Text != "")
+            {
+                operador1 = Convert.ToDouble(textBoxOperador.Text);
+                operador = "^";
+                textBoxOperador.Text = "0";
+            }
         }
 
         private void btnTangente_Click(object sender, EventArgs e)
