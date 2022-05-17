@@ -65,6 +65,42 @@ namespace Practica_GitHub_1oDAWSemi_Calculadora
             textBoxResultado.Text = "0";
         }
 
+        private void btnCero_Click(object sender, EventArgs e)
+        {
+            /**
+             *  @Author: Tonet / S3ll4rd0 (Antonio Nicolás Salmerón Rubio)
+             *  
+             *  @Method: Este método comprueba si solo hay un 0 en el operador, no añadir
+             *  más, y solo añadirá ceros en los supuestos de que el operador sea un "0,", 
+             *  es decir, un cero con coma, o que el operador sea mayor a un caracter, y que
+             *  este caracter sea distinto a 0.
+             */
+
+                // Obtengo el valor del textBox Operador y lo almaceno en el string operador
+            operador = textBoxOperador.Text;
+            
+                // Si el operador es solo un cero, no añado nada más, sigue siendo solo un cero
+            if (operador == "0")
+            {
+                operador = "0";
+            }
+                // Si el string operador contiene un 0 seguido de una coma, entonces si le permito 
+                // añadir todos los ceros que desee el usuario
+            else if (operador == "0,")
+            {
+                operador += "0";
+            }
+                // Si el operador es mayor a 1 carácter, y este carácter es distinto a 0,
+                // Por ejemplo, un "6", entonces si añado nuevos ceros al string operador
+            else if (operador.Length > 1 && operador != "0")
+            {
+                operador += "0";
+            }
+
+                // Imprimo en pantalla del operador el numero obtenido después de las operaciones.
+            textBoxOperador.Text = operador;
+        }
+
         private void btnUno_Click(object sender, EventArgs e)
         {
 
@@ -106,11 +142,6 @@ namespace Practica_GitHub_1oDAWSemi_Calculadora
         }
 
         private void btnNueve_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCero_Click(object sender, EventArgs e)
         {
 
         }
