@@ -103,7 +103,19 @@ namespace Practica_GitHub_1oDAWSemi_Calculadora
 
         private void btnUno_Click(object sender, EventArgs e)
         {
+            /**
+             *  @Author: Tonet / S3ll4rd0 (Antonio Nicolás Salmerón Rubio)
+             *  
+             *  @Method: Este método obtiene el contenido del text box operador, lo pasa al 
+             *  string operador, le añade un 1, y lo vuelve a mostrar en el text box.
+             */
 
+                // Obtengo el valor total del text Box del operador
+            operador = textBoxOperador.Text;
+                // Añado un 1 al operador
+            operador += "1";
+                // Vuelvo a mostrar el valor actualizado en el text box
+            textBoxOperador.Text = operador;
         }
 
         private void btnDos_Click(object sender, EventArgs e)
