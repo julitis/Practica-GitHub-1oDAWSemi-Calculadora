@@ -92,7 +92,7 @@ namespace Practica_GitHub_1oDAWSemi_Calculadora
             }
                 // Si el operador es mayor a 1 carácter, y este carácter es distinto a 0,
                 // Por ejemplo, un "6", entonces si añado nuevos ceros al string operador
-            else if (operador.Length > 1 && operador != "0")
+            else if (operador.Length >= 1 && operador != "0")
             {
                 operador += "0";
             }
