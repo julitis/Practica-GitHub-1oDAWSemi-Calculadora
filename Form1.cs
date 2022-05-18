@@ -92,7 +92,7 @@ namespace Practica_GitHub_1oDAWSemi_Calculadora
             }
                 // Si el operador es mayor a 1 carácter, y este carácter es distinto a 0,
                 // Por ejemplo, un "6", entonces si añado nuevos ceros al string operador
-            else if (operador.Length > 1 && operador != "0")
+            else if (operador.Length >= 1 && operador != "0")
             {
                 operador += "0";
             }
@@ -109,13 +109,18 @@ namespace Practica_GitHub_1oDAWSemi_Calculadora
              *  @Method: Este método obtiene el contenido del text box operador, lo pasa al 
              *  string operador, le añade un 1, y lo vuelve a mostrar en el text box.
              */
-
+            if (textBoxOperador.Text == "0") 
+            {
+                textBoxOperador.Text = "1";
+            }else
+            { 
                 // Obtengo el valor total del text Box del operador
             operador = textBoxOperador.Text;
                 // Añado un 1 al operador
             operador += "1";
                 // Vuelvo a mostrar el valor actualizado en el text box
             textBoxOperador.Text = operador;
+            }
         }
 
         private void btnDos_Click(object sender, EventArgs e)
@@ -169,7 +174,24 @@ namespace Practica_GitHub_1oDAWSemi_Calculadora
 
         private void btnSiete_Click(object sender, EventArgs e)
         {
-
+            /**
+            *  @Author: Anabel
+            *  
+            *  @Method: Este método obtiene el valor del textBoxOperador. En caso de qeu el contenido sea 0, 
+            *  lo elimina y pone un 7. Si tiene otro valor, añadirá el 7 a dicho valor. 
+            *  Devuelve resultado por textBoxOperador
+            *  
+            */
+            if (textBoxOperador.Text == "0")
+            {
+                textBoxOperador.Text = "7";
+            }
+            else 
+            {
+                operador=textBoxOperador.Text;
+                operador += "7";
+                textBoxOperador.Text = operador;
+            }
         }
 
         private void btnOcho_Click(object sender, EventArgs e)
@@ -242,6 +264,26 @@ namespace Practica_GitHub_1oDAWSemi_Calculadora
 
         private void btnDividir_Click(object sender, EventArgs e)
         {
+            /**
+            *  @Author: Anabel Mollà
+            *  
+            *  @Method: Obtiene el valor del textBoxOperador, lo convierte a double en el operador1 y lo pasa
+            *  al textBoxResultado concatenándolo con el signo "/".
+            *  Si existe resultado en textBoxResultado, recoge el valor del textBoxOperador como operador2
+            * 
+            * . 
+            */
+            if (textBoxResultado.Text == "0" || textBoxResultado.Text == "")
+            {
+                operador1 = Convert.ToDouble(textBoxOperador.Text);
+                textBoxResultado.Text = textBoxOperador.Text + "/";
+                textBoxOperador.Text="0";
+            }
+            else {
+
+                operador2 = Convert.ToDouble(textBoxOperador.Text);
+                textBoxOperador.Text = "0";
+            }
 
         }
 
