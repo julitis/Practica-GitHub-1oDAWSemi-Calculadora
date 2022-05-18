@@ -205,9 +205,12 @@ namespace Practica_GitHub_1oDAWSemi_Calculadora
         {
 
         }
-
+        /*Con este método cogemos los valores insertados en el textbox y lo restamos*/
         private void btnResta_Click(object sender, EventArgs e)
         {
+            operador1 = Convert.ToDouble(textBoxOperador.Text);
+            operador = "-";
+            textBoxOperador.Text = "0";
 
         }
 
@@ -275,9 +278,16 @@ namespace Practica_GitHub_1oDAWSemi_Calculadora
         {
 
         }
-
+        /*Con este método borramos toda operación y resultado y ponemos todo en su estado inicial*/
         private void btnBorrarTodo_Click(object sender, EventArgs e)
         {
+            operador1 = 0;
+            operador2 = 0;
+            resultado = 0;
+            operador = "";
+            tieneComa = false;
+            textBoxOperador.Text = "0";
+            textBoxResultado.Text = "0";
 
         }
     }
