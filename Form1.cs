@@ -213,6 +213,27 @@ namespace Practica_GitHub_1oDAWSemi_Calculadora
 
         private void btnMultiplicar_Click(object sender, EventArgs e)
         {
+            /**
+            *  @Author: Ivan Ibáñez
+            *  
+            *  @Method: Este método añade el textBoxOperador al textBoxResultado acompañado del simbolo de multiplicar x.
+            *  Si el operador1 es 0 es que es el primer operador que se introduce y pasa el contenido del textboxOperador
+            *  al textBoxResultado concatenado con el simbolo "x".
+            *  Si operador1 es distinto de 0 significa que es el segundo operador que se introduce con lo que se agrega a
+            *  operador2 el valor del textBoxOperador. 
+            */
+
+            if (operador1 == 0)
+            {
+                operador1 = Convert.ToDouble(textBoxOperador.Text);
+                textBoxResultado.Text = textBoxOperador.Text + " x";
+                textBoxOperador.Text = "0";
+
+            }
+            else if (operador1 != 0)
+            {
+                operador2 = Convert.ToDouble(textBoxOperador.Text);
+            }
 
         }
 
