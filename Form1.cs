@@ -261,6 +261,26 @@ namespace Practica_GitHub_1oDAWSemi_Calculadora
 
         private void btnDividir_Click(object sender, EventArgs e)
         {
+            /**
+            *  @Author: Anabel Mollà
+            *  
+            *  @Method: Obtiene el valor del textBoxOperador, lo convierte a double en el operador1 y lo pasa
+            *  al textBoxResultado concatenándolo con el signo "/".
+            *  Si existe resultado en textBoxResultado, recoge el valor del textBoxOperador como operador2
+            * 
+            * . 
+            */
+            if (textBoxResultado.Text == "0" || textBoxResultado.Text == "")
+            {
+                operador1 = Convert.ToDouble(textBoxOperador.Text);
+                textBoxResultado.Text = textBoxOperador.Text + "/";
+                textBoxOperador.Text="0";
+            }
+            else {
+
+                operador2 = Convert.ToDouble(textBoxOperador.Text);
+                textBoxOperador.Text = "0";
+            }
 
         }
 
