@@ -120,6 +120,15 @@ namespace Practica_GitHub_1oDAWSemi_Calculadora
 
         private void btnDos_Click(object sender, EventArgs e)
         {
+            /*Este método añadimos un 2 a la pantalla, comprobamos que no tenga nada el textbox y si lo tiene añadimos el 4*/
+            if (textBoxOperador.Text == "0")
+            {
+                textBoxOperador.Text = "2";
+            }
+            else
+            {
+                textBoxOperador.Text += "2";
+            }
 
         }
 
