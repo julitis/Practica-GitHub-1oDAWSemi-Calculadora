@@ -170,7 +170,21 @@ namespace Practica_GitHub_1oDAWSemi_Calculadora
 
         private void btnNueve_Click(object sender, EventArgs e)
         {
-
+            /**
+            *  @Author: Ivan Ibáñez
+            *  
+            *  @Method: Este método añade un 9 al textBoxOperador.
+            *  Si el contenido del textBoxOperador es 0, lo elimina y pone un 9. Si tiene otro valor 
+            *  concatena el textBoxOperador con un nueve.
+            */
+            if (textBoxOperador.Text == "0")
+            {
+                textBoxOperador.Text = "9";
+            }
+            else if (!textBoxOperador.Text.Equals("0"))
+            {
+                textBoxOperador.Text += "9";
+            }
         }
 
         private void btnPunto_Click(object sender, EventArgs e)
