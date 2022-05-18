@@ -169,7 +169,24 @@ namespace Practica_GitHub_1oDAWSemi_Calculadora
 
         private void btnSiete_Click(object sender, EventArgs e)
         {
-
+            /**
+            *  @Author: Anabel
+            *  
+            *  @Method: Este método obtiene el valor del textBoxOperador. En caso de qeu el contenido sea 0, 
+            *  lo elimina y pone un 7. Si tiene otro valor, añadirá el 7 a dicho valor. 
+            *  Devuelve resultado por textBoxOperador
+            *  
+            */
+            if (textBoxOperador.Text == "0")
+            {
+                textBoxOperador.Text = "7";
+            }
+            else 
+            {
+                operador=textBoxOperador.Text;
+                operador += "7";
+                textBoxOperador.Text = operador;
+            }
         }
 
         private void btnOcho_Click(object sender, EventArgs e)
