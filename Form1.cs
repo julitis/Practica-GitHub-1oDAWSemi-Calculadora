@@ -170,6 +170,22 @@ namespace Practica_GitHub_1oDAWSemi_Calculadora
 
         private void btnSeis_Click(object sender, EventArgs e)
         {
+            /**
+            *  @Author: Javi
+            *  
+            *  @Method: Este método obtiene el valor del textBoxOperador. En caso de qeu el contenido sea 0, 
+            *  lo elimina y pone un 6. Si tiene otro valor, añadirá el 6 a dicho valor. 
+            *  Devuelve resultado por textBoxOperador
+            */
+
+            if (textBoxOperador.Text == "0")
+            {
+                textBoxOperador.Text = "6";
+            }
+            else
+            {
+                textBoxOperador.Text += "6";
+            }
 
         }
 
@@ -298,8 +314,29 @@ namespace Practica_GitHub_1oDAWSemi_Calculadora
 
         }
 
+
+        /**
+         *  @Author: Javi
+         *  
+         *  @Method: Este método calcula la raíz cuadrada del numero introducido.
+         *  En caso que el campo textBoxOperador es vacio, devuelve un mensaje.
+         *  En caso contrario realiza la operación matemática.
+         */
+
         private void btnRaizCuadrada_Click(object sender, EventArgs e)
         {
+            if (textBoxOperador.Text == "0" || textBoxOperador.Text == "")
+            {
+                MessageBox.Show("Por favor, primero introduce el numero a evaluar la raíz cuadrada.");
+            }
+            else
+            {
+
+                int numero = Convert.ToInt32(textBoxOperador.Text);
+                double raizCuadrada = Math.Sqrt(numero);
+                textBoxResultado.Text = raizCuadrada.ToString();
+            }
+
 
         }
 
