@@ -165,7 +165,22 @@ namespace Practica_GitHub_1oDAWSemi_Calculadora
 
         private void btnCinco_Click(object sender, EventArgs e)
         {
+            /**
+           *  @Author: Javi
+           *  
+           *  @Method: Este método obtiene el valor del textBoxOperador. En caso de qeu el contenido sea 0, 
+           *  lo elimina y pone un 5. Si tiene otro valor, añadirá el 5 a dicho valor. 
+           *  Devuelve resultado por textBoxOperador
+           */
 
+            if (textBoxOperador.Text == "0")
+            {
+                textBoxOperador.Text = "5";
+            }
+            else
+            {
+                textBoxOperador.Text += "5";
+            }
         }
 
         private void btnSeis_Click(object sender, EventArgs e)
