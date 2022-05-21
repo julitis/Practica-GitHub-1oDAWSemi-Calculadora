@@ -170,6 +170,22 @@ namespace Practica_GitHub_1oDAWSemi_Calculadora
 
         private void btnSeis_Click(object sender, EventArgs e)
         {
+            /**
+            *  @Author: Javi
+            *  
+            *  @Method: Este método obtiene el valor del textBoxOperador. En caso de qeu el contenido sea 0, 
+            *  lo elimina y pone un 6. Si tiene otro valor, añadirá el 6 a dicho valor. 
+            *  Devuelve resultado por textBoxOperador
+            */
+
+            if (textBoxOperador.Text == "0")
+            {
+                textBoxOperador.Text = "6";
+            }
+            else
+            {
+                textBoxOperador.Text += "6";
+            }
 
         }
 
