@@ -257,6 +257,26 @@ namespace Practica_GitHub_1oDAWSemi_Calculadora
 
         private void btnSumar_Click(object sender, EventArgs e)
         {
+            /**
+            *  @Author: Sven Swers
+            *  
+            *  @Method: Este método añade al textBoxResultado los numeros introducidos en el textBoxOperador. Si es el primer 
+            *  numero que introducimos lo guardamos en el operador1, y si es el siguiente numero, se guarda en operador2. Guardamos
+            *  en operador el tipo de operacion.
+            */
+            if (textBoxResultado.Text.Equals("0"))
+            {
+                operador1 = Double.Parse(textBoxOperador.Text);
+                textBoxResultado.Text = operador1 + "+";
+                operador = "+";
+                textBoxOperador.Text = "0";
+            }
+            else
+            {
+                operador2 = Double.Parse(textBoxOperador.Text);
+                textBoxResultado.Text += operador2;
+                textBoxOperador.Text = "0";
+            }
 
         }
         /*Con este método cogemos los valores insertados en el textbox y lo restamos*/
@@ -394,6 +414,20 @@ namespace Practica_GitHub_1oDAWSemi_Calculadora
 
         private void btnTangente_Click(object sender, EventArgs e)
         {
+            /**
+             *  @Author: Sven Swers
+             *  
+             *  @Method: Este metodo agrega el numero introducido al operador1 y "tan" en operador. Muestra el numero y el
+             *  operador en el textBoxResultado.
+             *  
+             */
+            if (!textBoxOperador.Text.Equals("0"))
+            {
+                operador1 = Double.Parse(textBoxOperador.Text);
+                operador = "tan";
+                textBoxResultado.Text = operador1 + operador;
+                textBoxOperador.Text = "0";
+            }
 
         }
 
