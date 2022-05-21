@@ -314,8 +314,29 @@ namespace Practica_GitHub_1oDAWSemi_Calculadora
 
         }
 
+
+        /**
+         *  @Author: Javi
+         *  
+         *  @Method: Este método calcula la raíz cuadrada del numero introducido.
+         *  En caso que el campo textBoxOperador es vacio, devuelve un mensaje.
+         *  En caso contrario realiza la operación matemática.
+         */
+
         private void btnRaizCuadrada_Click(object sender, EventArgs e)
         {
+            if (textBoxOperador.Text == "0" || textBoxOperador.Text == "")
+            {
+                MessageBox.Show("Por favor, primero introduce el numero a evaluar la raíz cuadrada.");
+            }
+            else
+            {
+
+                int numero = Convert.ToInt32(textBoxOperador.Text);
+                double raizCuadrada = Math.Sqrt(numero);
+                textBoxResultado.Text = raizCuadrada.ToString();
+            }
+
 
         }
 
