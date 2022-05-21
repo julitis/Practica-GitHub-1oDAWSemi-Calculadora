@@ -324,8 +324,25 @@ namespace Practica_GitHub_1oDAWSemi_Calculadora
 
         }
 
+        /**
+        *  @Author: Javi
+        *  
+        *  @Method: Este método obtiene el porcentaje de un número.
+        */
         private void btnPorcentaje_Click(object sender, EventArgs e)
         {
+            if (textBoxOperador.Text == "0" || textBoxOperador.Text == "")
+            {
+                MessageBox.Show("Por favor, primero introduce el numero a evaluar la raíz cuadrada.");
+            }
+            else
+            {
+                double numero = Convert.ToInt32(textBoxOperador.Text);
+                double porcentaje = numero/100;
+                textBoxResultado.Text = porcentaje.ToString();
+            }
+
+
 
         }
 
