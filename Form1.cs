@@ -457,5 +457,6 @@ namespace Practica_GitHub_1oDAWSemi_Calculadora
             textBoxResultado.Text = "0";
 
         }
+        /*probando */
     }
 }
